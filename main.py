@@ -43,9 +43,9 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-API_ID    = os.environ.get("API_ID", "29937683")
-API_HASH  = os.environ.get("API_HASH", "5f6d4ca9ffadd037db94446dc7c0d6fa")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7927035300:AAEWD0wWg-Ivyw7aqEmYeJKiMGGgEV_JMkY") 
+API_ID    = os.environ.get("API_ID", "20607064")
+API_HASH  = os.environ.get("API_HASH", "c0a09fd762681a66366cf84976f31a17")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7653223664:AAGEhEFeqjlZ04VK5KQ6LW-p01BtcQdnXdE") 
 
 # Define aiohttp routes
 routes = web.RouteTableDef()
@@ -119,9 +119,9 @@ image_urls = [
     "https://ibb.co/mDwBpBK",
     "https://ibb.co/4jX6yCr",
     "https://ibb.co/fG3Gbzc",
-    "https://ibb.co/smfq00h",
-    "https://ibb.co/7Y0V5cG",
-    "https://ibb.co/C1KVvW6",
+    "https://envs.sh/vbZ.jpg",
+    "https://envs.sh/vbc.jpg",
+    "https://envs.sh/vbp.jpg",
     # Add more image URLs as needed
 ]
 
@@ -224,7 +224,7 @@ async def text_to_txt(client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@Strangerboy27_bot_strangerboy** for subscription details."
         )
         return
 
@@ -300,7 +300,7 @@ async def edit_txt(client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@Strangerboy27_bot_strangerboy** for subscription details."
         )
         return
 
@@ -347,7 +347,7 @@ async def edit_txt(client, message: Message):
         with open(uploaded_file, 'r', encoding='utf-8') as f:
             content = f.readlines()
     except Exception as e:
-        await message.reply_text(f"🚨 **Error**: Unable to read the file.\n\nDetails: {e}")
+        await message.reply_text(f"⁉️**Error**: Unable to read the file.\n\nDetails: {e}")
         return
 
     # Parse the content into subjects with links and topics
@@ -488,7 +488,7 @@ async def ytplaylist_to_txt(client: Client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@Strangerboy27_bot_strangerboy** for subscription details."
         )
         return
 
@@ -600,7 +600,7 @@ async def ytplaylist_to_txt(client: Client, message: Message):
     if not any(user[0] == user_id for user in subscription_data):
         await message.reply_text(
             "🚫 **You are not a premium user.**\n\n"
-            "🔑 Please contact my admin at: **@Thor_700** for subscription details."
+            "🔑 Please contact my admin at: **@Strangerboy27_bot_strangerboy** for subscription details."
         )
         return
 
@@ -639,11 +639,11 @@ async def start_command(bot: Client, message: Message):
     # Caption for the image
     caption = (
         "**𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!**\n\n"
-        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 ♥️**\n"
+        "➠ **STRANGER YOUR ↘️𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 ✮✩ 𝑅🍬𝒽𝒾𝓉  ✩✮**\n"
         "➠ **Can Extract Videos & PDFs From Your Text File and Upload to Telegram!**\n"
         "➠ **For Guide Use Command /guide 📖**\n\n"
         "➠ **Use /upload Command to Download From TXT File** 📄\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @Thor_700"
+        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @Strangerboy27_bot_strangerboy"
     )
 
     # Send the image with caption and buttons
@@ -881,7 +881,7 @@ async def show_users(client, message: Message):
     user_id = message.from_user.id
 
     if not is_admin(user_id):
-        await message.reply_text("❌ You are not authorized to use this command.")
+        await message.reply_text("❌🚸🔞 You are not authorized to use this command.")
         return
 
     subscription_data = read_subscription_data()
@@ -1149,7 +1149,7 @@ async def upload_handler(client: Client, m: Message):
     await editable.delete()
 
     thumb = input6.text
-    if thumb.startswith("http://") or thumb.startswith("https://"):
+    if thumb.startswith("https://envs.sh/vbp.jpg") or thumb.startswith("https://envs.sh/vbp.jpg"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
@@ -1252,9 +1252,13 @@ async def upload_handler(client: Client, m: Message):
         
                 
             try:                
-                cc = f'**[ 🎬 ] Lᴇᴄ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} {res} 🐲.mkv\n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
-                cc1 = f'**[ 📚 ] Pᴅғ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} 🐲.pdf \n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
-                cc2 = f'**[ 📷 ] IMAGE ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} 🐲.png \n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤ɆӾ₮Ɽ₳₵₮ɆĐ ฿Ɏ➵{CR}**'
+                cc = f'**[ 🎬👨‍💻 ] Lᴇᴄ ɪᴅ » {str(count).zfill(3)}.\n
+                \n📄 Title: {name1} {res}STRANGER 🧑‍💻.mkv\n
+                \n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ✮✩ 𝑅🍬𝒽𝒾𝓉  ✩✮{CR}**'
+                cc1 = f'**[ 📚 ] Pᴅғ ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} STRANGER 🧑‍💻.pdf \n
+                \n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤🎀  𝑅💗𝒽𝒾𝓉  🎀{CR}**'
+                cc2 = f'**[ 📷 ] IMAGE ɪᴅ » {str(count).zfill(3)}.\n\n📄 Title: {name1} STRANGER 🧑‍💻.png \n
+                \n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n📥 ➤✮✩ 𝑅🍬𝒽𝒾𝓉  ✩✮{CR}**'
                                                  
                 if "drive" in url:
                     try:
@@ -1348,7 +1352,7 @@ async def upload_handler(client: Client, m: Message):
                     Show = f"""❊ ♻️..𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠..♻️ ❊ »\n\n📄 **Title:** `{name}`\n🔥 **Quality:** {raw_text2}\n"""
                 
                     # Enhanced prog message
-                    prog = await m.reply_text(f"**♻️..Downloading Video..♻️**\n\n📄 **Title:** `{name}`\n🔥 **Quality:** {raw_text2}\n\n⚡ **Bσƚ Oɯɳҽɾ➵ITS๛Pυɳҽҽƚ亗")
+                    prog = await m.reply_text(f"**▂▃▅▇█▓▒░𝚂𝚃𝚁𝙰𝙽𝙶𝙴𝚁 𝙱𝙾𝚈 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚢𝚘𝚞𝚛 𝚝𝚊𝚜𝚔░▒▓█▇▅▃▂**\n\n📄 **Title:** `{name}`\n🔥 **Quality:** {raw_text2}\n\n⚡ **▂▃▅▇█▓▒░𝚂𝚃𝚁𝙰𝙽𝙶𝙴𝚁 𝙱𝙾𝚈░▒▓█▇▅▃▂")
                
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -1365,7 +1369,7 @@ async def upload_handler(client: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("🔰Done Boss🔰")
+    await m.reply_text("▁ ▂ ▄ ▅ ▆ ▇ █ 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗕𝗢𝗬 𝗥𝗢𝗛𝗜𝗧 █ ▇ ▆ ▅ ▄ ▂ ▁")
 
 
 
